@@ -1,0 +1,306 @@
+@media (max-width: 87.4375em) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1;
+  }
+  .dashboard {
+    width: 100%;
+    gap: 1.5rem;
+    grid-template-areas: "nav" "work" "play" "study" "exercise" "social" "self_care";
+  }
+  .card {
+    height: 10rem;
+  }
+  .card__times {
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav .profile {
+    gap: 1rem;
+    flex-direction: row;
+  }
+  .nav .profile__image {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+  .nav .options {
+    flex-direction: row;
+    align-items: center;
+    height: 4.375rem;
+  }
+}
+@media (min-width: 87.5em) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .container {
+    height: 100vh;
+  }
+  .dashboard {
+    width: 69.375rem;
+    height: 32.375rem;
+    gap: 1.875rem;
+    grid-template-areas: "nav work play study" "nav exercise social self_care";
+  }
+  .card {
+    height: 15.25rem;
+    width: 16rem;
+  }
+  .card__content {
+    height: 100%;
+  }
+  .card__times {
+    padding-top: 1.5rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  .nav .profile {
+    gap: 2rem;
+    flex-direction: column;
+    height: 22.125rem;
+  }
+  .nav .profile__image {
+    width: 5.375rem;
+    height: 5.375rem;
+  }
+  .nav .options {
+    flex-direction: column;
+    align-items: start;
+    height: 10.25rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5;
+}
+body h1, body h2 {
+  font-weight: 300;
+  margin: 0.5rem 0 0 0;
+}
+body b {
+  font-weight: 400;
+}
+body p {
+  margin: 0;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+body .attribution a {
+  color: hsl(246, 80%, 60%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5.0625rem 1.5rem;
+  background-color: hsl(226, 43%, 10%);
+}
+
+.dashboard {
+  display: grid;
+}
+
+.card {
+  padding-top: 2.375rem;
+  justify-content: stretch;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1.5rem;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  transition: filter 300ms ease-in-out;
+}
+.card__content:hover {
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+.card__content > :nth-child(2n) {
+  text-align: right;
+}
+.card__times {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.card__previous {
+  font-size: 0.875rem;
+  opacity: 70%;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+}
+.nav .profile {
+  display: flex;
+  padding: 2rem;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 1rem;
+}
+.nav .profile__image {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.nav .profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav .options {
+  display: flex;
+  justify-content: space-around;
+}
+.nav .options:hover {
+  cursor: pointer;
+}
+.nav .options a {
+  opacity: 70%;
+}
+
+.work {
+  grid-area: work;
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+  grid-area: play;
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+  grid-area: study;
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  grid-area: exercise;
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+  grid-area: social;
+  background-color: hsl(264, 64%, 52%);
+}
+
+.self_care {
+  grid-area: self_care;
+  background-color: hsl(43, 84%, 65%);
+}
+
+/*
+Meatballs Menu
+source: https://codepen.io/aaronegarcia1/pen/JjeqgoP?anon=true&view=pen (05.07.2024)
+ */
+.meatball {
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  background: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  transform: scale(0.5);
+}
+.meatball .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: white;
+  transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0.3s;
+}
+.meatball .dot:nth-of-type(1) {
+  transform: translate(calc(-50% - 0.7rem), -50%) rotate(45deg);
+}
+.meatball .dot:nth-of-type(2) {
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease 0.1s;
+}
+.meatball .dot:nth-of-type(3) {
+  transform: translate(calc(-50% + 0.7rem), -50%) rotate(-45deg);
+}
+.meatball:hover .dot:nth-of-type(1) {
+  animation: flicker 0.4s linear;
+}
+.meatball:hover .dot:nth-of-type(2) {
+  animation: flicker 0.4s linear 0.05s;
+}
+.meatball:hover .dot:nth-of-type(3) {
+  animation: flicker 0.4s linear 0.1s;
+}
+.meatball.active {
+  transform: rotate(180deg) scale(0.5);
+}
+.meatball.active .dot {
+  transition: width 0.4s ease 0.3s, height 0.4s ease 0.3s, transform 0.2s ease;
+}
+.meatball.active .dot:nth-of-type(1) {
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.meatball.active .dot:nth-of-type(2) {
+  width: 0;
+  height: 0;
+}
+.meatball.active .dot:nth-of-type(3) {
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.meatball.active:hover .dot {
+  animation: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

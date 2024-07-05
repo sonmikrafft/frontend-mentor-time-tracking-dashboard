@@ -1,0 +1,42 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: $font-m;
+  font-family: "Rubik", sans-serif;
+  font-weight: $font-weight-s;
+  color: white;
+  line-height: 1.5;
+
+  h1, h2 {
+    font-weight: $font-weight-s;
+    margin: 0.5rem 0 0 0;
+  }
+
+  b {
+    font-weight: $font-weight-m;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: black;
+
+    a {
+      color: $blue;
+    }
+  }
+}
